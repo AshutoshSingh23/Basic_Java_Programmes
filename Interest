@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        double P,R,T;
+        int o;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter principle amount, rate, time period:");
+        P=sc.nextDouble();
+        R=sc.nextDouble();
+        T=sc.nextDouble();
+        System.out.println("Options:\n 1.Simple interest\n 2.Compound interest");
+        o=sc.nextInt();
+        switch(o){
+            case 1:
+                Simple(P,R,T);
+                break;
+            case 2:
+                System.out.println("Enter the number of times interest applied per time period:");
+                int n=sc.nextInt();
+                Compound(P,R,T,n);
+                break;
+            default:
+                System.out.println("invalid input");
+        }
+    }
+    public static void Simple(double P,double R,double T){
+        double S=(P*R*T)/100;
+        System.out.println("Simple Interest is: "+S);
+    }
+    public static void Compound(double P,double R,double T,int n){
+        double C=P*(Math.pow(1.0+R/100.0,T))-P;
+        System.out.println("Compound Interest is: "+C);
+    }
+}
