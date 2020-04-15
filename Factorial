@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class For {
+    public static void main(String[] args){
+        int i,n,f=1;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number:");
+        n=sc.nextInt();
+        for(i=0;i<n;i++){
+            f*=(n-i);
+        }
+        System.out.println("Factorial is "+f);
+    }
+}
+
+import java.util.Scanner;
+public class While {
+    public static void main(String[] args){
+        int i=0,n,f=1;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number:");
+        n=sc.nextInt();
+        while(i!=n){
+            f*=(n-i);
+            i++;
+        }
+        System.out.println("Factorial is "+f);
+    }
+}
+import java.util.Scanner;
+public class Do_while {
+    public static void main(String[] args){
+        int i=0,n,f=1;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number:");
+        n=sc.nextInt();
+        if(n==0){
+            System.out.println("Factorial is 1");
+        }
+        else {
+            do {
+                f *= (n - i);
+                i++;
+            } while (i != (n - 1));
+            System.out.println("Factorial is " + f);
+        }
+    }
+}

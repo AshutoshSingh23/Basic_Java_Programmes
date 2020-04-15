@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Heron {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        double a,b,c,s,area,t;
+        System.out.println("Enter the length of sides of triangle:");
+        a=sc.nextDouble();
+        b=sc.nextDouble();
+        c=sc.nextDouble();
+        if(((a+b)>c)&&((a+c)>b)&&((b+c)>a)){
+            s=(a+b+c)/2;
+            t=s*(s-a)*(s-b)*(s-c);
+            area=Math.sqrt(t);
+            System.out.println("the area of triangle is "+area);
+        }
+        else{
+            System.out.println("Invalid input");
+        }
+    }
+}
