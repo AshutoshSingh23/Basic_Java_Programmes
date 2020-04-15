@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n,m,r=0,d;
+        System.out.println("Enter the number:");
+        n=sc.nextInt();
+        m=n;
+        while(m!=0){
+            d=m%10;
+            m=m/10;
+            r=10*r+d;
+        }
+        if(n==r){
+            System.out.println("The given number is a pallindrone");
+        }
+        else{
+            System.out.println("The given number is not a pallindrone");
+        }
+    }
+}
