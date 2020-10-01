@@ -7,20 +7,33 @@ public class Prime {
         System.out.println("Enter the range:");
         n=sc.nextInt();
         m=sc.nextInt();
-        if(n>m){
+       //there might be many better ways as user don't know you want him to enter a smaller number first
+       //if user enters both the number same , why its an invalid. You only asked for range.
+       
+       int small=n<m?n:m;
+       int large=n>m?n:m;
+       
+       
+       
+       /* if(n>m){
             System.out.println("Invalid input");
-        }
-        else{
-            for(int i=n;i<=m;i++){
-                int x=0;
-                for(int j=1;j<=i;j++){
-                    if(i%j==0)
-                        x++;
-                }
-                if(x==2){
-                    System.out.println(i);
-                }
+        }*/
+              
+           
+            for(int i=small;i<=large;i++){
+                int flag=0;
+             /*   for(int j=1;j<=i;j++){    */         //if you divide every number by one there will be no prime as all numbers are divided by one           
+                   for(int j=2;j<=i/2;j++){            //if number is not divisible by half of itself ...it is a prime....its shortcut :)
+                   if(i%j==0){
+                     flag=1;
+                     break;
+                    {    
+                   }
+       
+                if(flag!=1)    
+                    System.out.println(i+" ");
+                
             }
-        }
+        
     }
 }
