@@ -6,9 +6,13 @@ public class Swap1 {
         System.out.println("Enter numbers:");
         a=sc.nextInt();
         b=sc.nextInt();
-        c=b;
+       /* c=b;
         b=a;
-        a=c;
+        a=c;/*
+        //swap without using third variable
+        a=a-b;
+        b=a+b;
+        a=b-a;        
         System.out.println(a);
         System.out.println(b);
     }
