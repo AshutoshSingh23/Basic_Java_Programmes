@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Array {
+    public static void main(String[] args){
+        int h, f, n, k;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the no. of terms and rotation:");
+        n = scan.nextInt();
+        k = scan.nextInt();
+        h = k%n;
+        f = n-h;
+        int a[] =new int[n];
+        int r[] = new int[n];
+        int s[] = new int[f];
+        System.out.println("Enter the terms:");
+        for (int i=0;i<n;i++){
+            a[i] = scan.nextInt();
+        }
+        for(int i=0;i<f;i++){
+            s[i] = a[i];
+        }
+        for(int i=0;i<h;i++){
+            r[i] = a[i+f];
+        }
+        for(int i=h;i<n;i++) {
+            r[i] = s[i - h];
+        }
+        for (int i=0;i<n;i++){
+            System.out.println(r[i]);;
+        }
+    }
+}
